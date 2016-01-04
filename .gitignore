@@ -1,0 +1,9 @@
+*/tmp-build/*
+*/tmp-dest/*
+*/cache/*
+*.zip
+*.tar.gz
+*.deb
+*.rpm
+
+mkdocs/site/
