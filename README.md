@@ -1,5 +1,7 @@
 # ODPS Software Distribution
 
+[![Build Status](https://travis-ci.org/aliyun/aliyun-odps-software-dist.svg)](https://travis-ci.org/aliyun/aliyun-odps-software-dist)
+
 Everything(docs, packaging recipes, and scripts...) we needed to generate [http://repo.aliyun.com](http://repo.aliyun.com).
 
 
