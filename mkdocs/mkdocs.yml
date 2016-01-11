@@ -6,5 +6,6 @@ pages:
 - Home: 'index.md'
 - ODPS 命令行工具: 'odpscmd.md'
 - JDBC 驱动: 'jdbc.md'
-- Flume 插件: 'flume.md'
 - Fluentd 插件: 'fluentd.md'
+- Logstash 插件: 'logstash.md'
+- Flume 插件: 'flume.md'
