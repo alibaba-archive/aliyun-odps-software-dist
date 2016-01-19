@@ -5,7 +5,9 @@ rvm:
   - 2.0.0
 
 before_install:
-  git clone https://github.com/bernd/fpm-cookery.git
+  - gem --version
+  - git clone https://github.com/bernd/fpm-cookery.git
 
 script:
-  bundle exec fpm-cook odpscmd/recipe.rb
+  - bundle exec fpm-cook --version
+  - bundle exec fpm-cook odpscmd/recipe.rb
