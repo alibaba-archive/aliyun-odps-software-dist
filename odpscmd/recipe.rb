@@ -1,7 +1,7 @@
 class OdpscmdPublic < FPM::Cookery::Recipe
   name     'odpscmd'
-  version  '0.20.0'
-  revision '2'
+  version  '0.20.1'
+  revision '3'
   arch     'noarch'
 
   homepage    'http://github.com/aliyun/aliyun-odps-console'

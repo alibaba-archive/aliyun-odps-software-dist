@@ -1,5 +1,6 @@
 */tmp-build/*
 */tmp-dest/*
+*/pkg/*
 */cache/*
 *.zip
 *.tar.gz
