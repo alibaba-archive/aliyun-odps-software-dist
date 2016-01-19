@@ -10,4 +10,4 @@ before_install:
 
 script:
   - bundle exec fpm-cook --version
-  - bundle exec fpm-cook odpscmd/recipe.rb
+  - sudo env PATH=$PATH bundle exec fpm-cook package odpscmd/recipe.rb
