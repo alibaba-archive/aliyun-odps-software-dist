@@ -1,12 +1,12 @@
 class OdpscmdPublic < FPM::Cookery::Recipe
   name     'odpscmd'
-  version  '0.20.1'
-  revision '3'
+  version  '0.20.2'
+  revision '4'
   arch     'noarch'
 
   homepage    'http://github.com/aliyun/aliyun-odps-console'
-  source      'https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/cn/odps/0.0.62/assets/download/odpscmd_public.zip'
-  md5         '17687cb46fa4cfd441956b8fe4ed634b'
+  source      'https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/cn/odps/0.0.84/assets/download/odpscmd_public.zip'
+  md5         '351009e7d2a327251ee93b8318aca482'
   description 'Aliyun ODPS Command Line Tool'
   section     'database'
   license     'Apache License 2.0'

@@ -1,16 +1,10 @@
 
-language: ruby
-
-rvm:
-  - 2.0.0
-
-before_install:
-  - gem --version
-  - git clone https://github.com/bernd/fpm-cookery.git
+before_script:
+  - curl -s http://repo.aliyun.com/deb.gpg.key | sudo apt-key add -
+  - echo "deb http://repo.aliyun.com/apt/debian/ /" | sudo tee -a /etc/apt/sources.list
+  - sudo apt-get update -qq
+  - sudo apt-get install odpscmd
 
 script:
-  - bundle exec fpm-cook --version
-  - make odpscmd.deb
-  - make odpscmd.rpm
+  - odpscmd --version
 
-# - sudo env PATH=$PATH bundle exec fpm-cook package odpscmd/recipe.rb

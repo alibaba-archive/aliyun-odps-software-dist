@@ -6,5 +6,7 @@
 *.tar.gz
 *.deb
 *.rpm
-
+apt/
+yum/
 mkdocs/site/
+*~
