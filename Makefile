@@ -2,7 +2,7 @@ ROOT = $(shell pwd)
 USER = $(shell whoami)
 WEBHOME = /var/www/repo.aliyun.com
 DEB_DIR = $(WEBHOME)/apt/debian
-RPM_DIR = $(WEBHOME)/apt/yum
+RPM_DIR = $(WEBHOME)/yum
 CP = cp -rf
 
 rpm_dir:
@@ -14,8 +14,7 @@ deb_dir:
 deploy: deb.gpg.key gen_repos.sh
 	$(CP) deb.gpg.key $(WEBHOME)/
 	$(CP) gen_repos.sh $(WEBHOME)/
-	cd $(WEBHOME)/
-	sh gen_repos.sh
+	cd $(WEBHOME) && sh gen_repos.sh
 
 deploy-web: docs
 	$(CP) $(ROOT)/mkdocs/site/* $(WEBHOME)/ 
@@ -33,6 +32,7 @@ clean:
 	rm -rf yum
 	rm -rf apt
 	rm -rf $(wildcard */pkg)
-	rm -rf $(wildcard */cache)
 	rm -rf $(wildcard */tmp-build)
 	rm -rf $(wildcard */tmp-dest)
+	rm -rf $(DEB_DIR)
+	rm -rf $(RPM_DIR)
