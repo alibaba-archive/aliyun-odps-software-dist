@@ -11,7 +11,8 @@ rpm_dir:
 deb_dir:
 	mkdir -p $(DEB_DIR)
 
-deploy: deb.gpg.key gen_repos.sh
+deploy: deb.gpg.key gen_repos.sh aliyun.repo
+	$(CP) aliyun.repo $(WEBHOME)/
 	$(CP) deb.gpg.key $(WEBHOME)/
 	$(CP) gen_repos.sh $(WEBHOME)/
 	cd $(WEBHOME) && sh gen_repos.sh

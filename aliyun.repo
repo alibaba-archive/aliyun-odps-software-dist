@@ -1,0 +1,6 @@
+[aliyun-yum]
+name=aliyun-yum
+baseurl=http://repo.aliyun.com/yum/
+enabled=1
+gpgcheck=0
+gpgkey=
