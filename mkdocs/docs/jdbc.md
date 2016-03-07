@@ -11,7 +11,7 @@
 
 本地下载：
 
-* [odps-jdbc-1.6-with-dependencies.jar](odps-jdbc-1.6-with-dependencies.jar)
+* [odps-jdbc-1.6-with-dependencies.jar](/download/odps-jdbc-1.6-jar-with-dependencies.jar)
 * [odps-jdbc-1.6.jar](/download/odps-jdbc-1.6.jar) 
 
 ### 通过 Maven 主仓管理依赖 
