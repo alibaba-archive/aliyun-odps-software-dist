@@ -1,14 +1,17 @@
+language: generic
+
 services:
   - docker
 
-before_script:
-  - curl -s http://repo.aliyun.com/deb.gpg.key | sudo apt-key add -
-  - echo "deb http://repo.aliyun.com/apt/debian/ /" | sudo tee -a /etc/apt/sources.list
-  - sudo apt-get update -qq
-  - sudo apt-get -y install odpscmd
-  - sudo apt-get -y install odps-flume-plugin
-  - docker run centos:6 /bin/bash -c 'curl -s http://repo.aliyun.com/aliyun.repo > /etc/yum.repos.d/aliyun.repo && yum -y install odpscmd  && odpscmd --version'
+env:
+  - DOCKER_IMAGE=centos:6 PROG=odpscmd
+  - DOCKER_IMAGE=centos:7 PROG=odpscmd
+  - DOCKER_IMAGE=ubuntu:14.04 PROG=odpscmd
 
-script:
-  - odpscmd --version
+install:
+  - echo $PROG
+  - echo $DOCKER_IMAGE
+  - docker pull $DOCKER_IMAGE
+
+script: ./test_repos.sh
 
