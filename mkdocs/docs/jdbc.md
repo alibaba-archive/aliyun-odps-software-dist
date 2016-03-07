@@ -9,6 +9,11 @@
 
 从 [Github Release 页面](https://github.com/aliyun/aliyun-odps-jdbc/releases) 下载最新版的 `odps-jdbc-x.y-jar-with-dependencies.jar` 将其添加到你的项目中。
 
+本地下载：
+
+* [odps-jdbc-1.6-with-dependencies.jar](odps-jdbc-1.6-with-dependencies.jar)
+* [odps-jdbc-1.6.jar](/download/odps-jdbc-1.6.jar) 
+
 ### 通过 Maven 主仓管理依赖 
 
 ```
