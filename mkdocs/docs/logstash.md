@@ -3,11 +3,11 @@
 
 ### 安装插件
 
-使用 gem 安装，并在 logstash 中安装插件。
+
+下载 [logstash-output-datahub-1.0.0.gem](/download/logstash-output-datahub-1.0.0.gem)，运行
 
 ```
-$ gem install logstash-output-datahub
-$ {YOUR_LOGSTASH_DIRECTORY}/bin/plugin install logstash-output-datahub
+{YOUR_LOGSTASH_DIRECTORY}/bin/plugin install logstash-output-datahub-1.0.0.gem
 ```
 
 ### 配置文件
