@@ -1,6 +1,6 @@
 # 阿里云 ODPS 工具
 
-欢迎使用阿里云 ODPS 生态工具，如果遇到请联系 [Lyman](mailto:lymanrb@gmail.com)/[onesuper](onesuperclark@gmail.com) 。
+欢迎使用阿里云 ODPS 生态工具，如果遇到请联系 [Lyman](mailto:lymanrb@gmail.com) 或 [onesuper](mailto:onesuperclark@gmail.com) 。
 
 
 ## 配置 YUM 远程仓库

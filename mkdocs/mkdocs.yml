@@ -5,6 +5,7 @@ google_analytics: ['UA-70496103-1', 'repo.aliyun.com']
 pages:
 - Home: 'index.md'
 - ODPS 命令行工具: 'odpscmd.md'
+- ODPS ETL 工具: 'etl.md'
 - JDBC 驱动: 'jdbc.md'
 - Fluentd 插件: 'fluentd.md'
 - Logstash 插件: 'logstash.md'
