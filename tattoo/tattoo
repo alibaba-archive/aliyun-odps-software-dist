@@ -1,0 +1,6 @@
+#!/bin/bash
+
+user_dir=$HOME/.odpscmd
+
+
+java -Xms64m -Xmx512m -classpath "/opt/tattoo/lib/*:${user_dir}" CLI  "$@"

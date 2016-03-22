@@ -1,6 +1,24 @@
 
 # ODPS ETL 工具
 
+
+## 下载 & 安装
+
+使用过程中遇到问题请联系：[onesuper](mailto:onesuperclark@gmail.com)
+
+### TAR 包下载
+
+* [tattoo-1.0.zip](/download/tattoo.zip)
+* [tattoo-1.0.tar.gz](/download/tattoo.tar.gz)
+
+### 从 YUM 安装
+
+TBA
+
+### 从 APT 安装
+
+TBA
+
 ## 简介
 
 tattoo 是一个命令行版的 ETL 工具。每一条 tattoo 命令可以从一个特定的数据源中提取数据、并加载到 ODPS （分区）表。
@@ -31,6 +49,8 @@ tattoo -t test_table1 read-csv file1 file2
 | `--time-format`  | `yyyy-MM-dd HH:mm:ss`    | 用来解析日期字符串的 SimpleDateFormat | 
 | `--time-zone`    | `UTC`    | 用来解析日期的时区 | 
 | `--head`         | `-1`    | 上传前 N 条数据，类似 UNIX 的 head 命令 | 
+
+
 
 
 

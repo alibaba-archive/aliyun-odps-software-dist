@@ -7,7 +7,8 @@ env:
   - DOCKER_IMAGE=centos:6 PROG=odpscmd
   - DOCKER_IMAGE=centos:7 PROG=odpscmd
   - DOCKER_IMAGE=ubuntu:14.04 PROG=odpscmd
-
+  - DOCKER_IMAGE=centos:7 PROG=tattoo
+  - DOCKER_IMAGE=ubuntu:14.04 PROG=tattoo
 install:
   - echo $PROG
   - echo $DOCKER_IMAGE
