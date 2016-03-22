@@ -11,17 +11,35 @@
 * [tattoo-1.0.zip](/download/tattoo.zip)
 * [tattoo-1.0.tar.gz](/download/tattoo.tar.gz)
 
-### 从 YUM 安装
 
-TBA
 
-### 从 APT 安装
+### Redhat/CentOS 用户通过 YUM 安装
 
-TBA
+<div class="alert alert-info" role="alert">
+<p>Redhat, CentOS 用户请根据<a href="/#yum">指导配置 YUM 远程仓库</a>。</p>
+</div>
+
+
+```
+sudo yum -y install tattoo
+```
+
+### Ubuntu/Debian 用户通过 APT 安装
+
+<div class="alert alert-info" role="alert">
+<p>Ubuntu, Debian 用户请根据<a href="/#apt">指导配置 APT 远程仓库</a>。</p>
+</div>
+
+
+```
+sudo apt-get -y install tattoo
+```
+
+
 
 ## 简介
 
-tattoo 是一个命令行版的 ETL 工具。每一条 tattoo 命令可以从一个特定的数据源中提取数据、并加载到 ODPS （分区）表。
+tattoo(take anything to odps) 是一个命令行版的 ETL 工具。每一条 tattoo 命令可以从一个特定的数据源中提取数据、并加载到 ODPS （分区）表。
 
 
 例如下面这条命令可以把 CSV 格式的 `file1` 和 `file2` 中的内容上传到 `test_table1`：

@@ -11,7 +11,7 @@
 
 
 ```
-yum -y install odpscmd
+sudo yum -y install odpscmd
 ```
 
 ### Ubuntu/Debian 用户通过 APT 安装
@@ -22,7 +22,7 @@ yum -y install odpscmd
 
 
 ```
-apt-get -y install odpscmd
+sudo apt-get -y install odpscmd
 ```
 
 
