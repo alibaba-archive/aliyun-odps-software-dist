@@ -1,5 +1,5 @@
-class OdpscmdPublic < FPM::Cookery::Recipe
-  name     'odpscmd'
+class OdpsETL < FPM::Cookery::Recipe
+  name     'tattoo'
   version  '1.0'
   revision '1'
   arch     'noarch'
