@@ -1,12 +1,13 @@
-site_name: 阿里云 ODPS 工具
+site_name: 阿里云 ODPS 生态
 site_favicon: favicon.ico
 theme: bootstrap
 google_analytics: ['UA-70496103-1', 'repo.aliyun.com']
 pages:
 - Home: 'index.md'
-- ODPS 命令行工具: 'odpscmd.md'
-- ODPS ETL 工具: 'etl.md'
-- JDBC 驱动: 'jdbc.md'
-- Fluentd 插件: 'fluentd.md'
-- Logstash 插件: 'logstash.md'
-- Flume 插件: 'flume.md'
+- Console: 'odpscmd.md'
+- ETL Console: 'etl.md'
+- ETL SDK: 'etl-sdk.md'
+- JDBC: 'jdbc.md'
+- Fluentd: 'fluentd.md'
+- Logstash: 'logstash.md'
+- Flume: 'flume.md'
