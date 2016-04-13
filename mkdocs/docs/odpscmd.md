@@ -29,6 +29,13 @@ sudo apt-get -y install odpscmd
 
 ### 下载压缩包
 
+本地下载：
+
+* [0.21.1](/download/odpscmd/0.21.1/odpscmd_public.zip),[md5sum](/download/odpscmd/0.21.1/odpscmd_public.zip.md5sum)
+* [0.20.3](/download/odpscmd/0.20.3/odpscmd_public.zip),[md5sum](/download/odpscmd/0.20.3/odpscmd_public.zip.md5sum)
+* [0.19.1](/download/odpscmd/0.19.1/odpscmd_public.zip),[md5sum](/download/odpscmd/0.19.1/odpscmd_public.zip.md5sum)
+
+
 [阿里云官方下载](https://help.aliyun.com/document_detail/odps/tools/console/console.html)
 
 
