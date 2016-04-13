@@ -4,9 +4,8 @@ theme: bootstrap
 google_analytics: ['UA-70496103-1', 'repo.aliyun.com']
 pages:
 - Home: 'index.md'
-- Console: 'odpscmd.md'
-- ETL Console: 'etl.md'
-- ETL SDK: 'etl-sdk.md'
+- 命令行工具: 'odpscmd.md'
+- ETL 工具/SDK: 'etl.md'
 - JDBC: 'jdbc.md'
 - Fluentd: 'fluentd.md'
 - Logstash: 'logstash.md'
