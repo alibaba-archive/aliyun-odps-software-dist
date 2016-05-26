@@ -85,7 +85,14 @@ export PATH="$PATH:$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
 假设需要导入的 ODPS 表为 demo_access_log，其建表语句为
 
 ```
-create table demo_access_log (remote_ip STRING,remote_user STRING,time STRING,request STRING,http_code BIGINT,body_size BIGINT,referer STRING,user_agent STRING);
+create table demo_access_log(
+       remote STRING,
+       method STRING,
+       path STRING,
+       code STRING,
+       size STRING,
+       agent STRING)
+partitioned by (ctime STRING);
 ```
 
 ### 编辑配置文件 fluent_nginx_odps.conf
@@ -135,4 +142,4 @@ fluentd -c fluent_nginx_odps.conf
 
 ## Doc
 
-https://help.aliyun.com/document_detail/odps/dhs/plugin/fluentd.html
+[https://help.aliyun.com/document_detail/odps/dhs/plugin/fluentd.html](https://help.aliyun.com/document_detail/odps/dhs/plugin/fluentd.html)
