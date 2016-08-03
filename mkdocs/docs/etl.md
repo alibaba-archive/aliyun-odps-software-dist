@@ -31,8 +31,8 @@ sudo apt-get -y install tattoo
 
 ### TAR 包下载
 
-* [tattoo-1.0.zip](/download/tattoo.zip)
-* [tattoo-1.0.tar.gz](/download/tattoo.tar.gz)
+* [tattoo-1.1.zip](/download/tattoo.zip)
+* [tattoo-1.1.tar.gz](/download/tattoo.tar.gz)
 
 
 ## 简介
