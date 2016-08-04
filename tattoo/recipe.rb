@@ -6,7 +6,7 @@ class OdpsETL < FPM::Cookery::Recipe
 
   homepage    'http://repo.aliyun.com/etl/'
   source      'http://repo.aliyun.com/download/tattoo.tar.gz'
-  md5         'ad9d9d811f146206596985a8461e407b'
+  md5         '565449d394cc9236f63129e1db245d5e'
   description 'Aliyun ODPS ETL Tool'
   section     'database'
   license     'Apache License 2.0'
