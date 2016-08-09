@@ -11,4 +11,28 @@ if [ ! -e ${user_dir} ]; then
     fi
 fi
 
-java -Xms64m -Xmx512m -classpath "/opt/odpscmd/lib/*:${user_dir}/:${sys_dir}/" com.aliyun.openservices.odps.console.ODPSConsole  "$@"
+function lowest_unused_fd() {
+    local FD=10
+    while [ -e /dev/fd/$FD ]; do
+        FD=$((FD+1))
+    done
+    echo $FD
+}
+
+file=`mktemp -t "XXXXXXXX"`
+
+wfd=$(lowest_unused_fd)
+eval "exec $wfd>$file"
+
+rfd=$(lowest_unused_fd)
+eval "exec $rfd<$file"
+rm -f $file
+
+for var in "$@"
+do
+    printf -- "%s\0" "$var" >&$wfd
+done
+
+eval "exec $wfd>&-"
+
+java -Xms64m -Xmx512m -classpath "/opt/odpscmd/lib/*:${user_dir}/:${sys_dir}/" com.aliyun.openservices.odps.console.ODPSConsole  -I $rfd
