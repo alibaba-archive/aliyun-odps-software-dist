@@ -386,6 +386,15 @@ ETL SDK 包含两个部分：
 
 ### Maven 依赖
 
+下载 <a href="../download/etl_sdk/odps-etl-core-1.0-SNAPSHOT.jar">odps-etl-core-1.0-SNAPSHOT.jar</a> 和  <a href="../download/etl_sdk/odps-etl-core-1.0-SNAPSHOT.pom">odps-etl-core-1.0-SNAPSHOT.pom</a>  , 然后根据以下命令进行本地仓库的安装:
+
+```
+mvn install:install-file -Dfile=odps-etl-core-1.0-SNAPSHOT.jar -DgroupId=com.aliyun.odps  -DpomFile=odps-etl-core-1.0-SNAPSHOT.pom
+```
+
+完成安装后,即可在pom.xml中添加以下依赖完成对SDK的引用
+
+
 ```
 <dependency>
     <groupId>com.aliyun.odps</groupId>
