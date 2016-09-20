@@ -5,8 +5,4 @@ google_analytics: ['UA-70496103-1', 'repo.aliyun.com']
 pages:
 - Home: 'index.md'
 - 命令行工具: 'odpscmd.md'
-- ETL 工具/SDK: 'etl.md'
-- JDBC: 'jdbc.md'
-- Fluentd: 'fluentd.md'
-- Logstash: 'logstash.md'
-- Flume: 'flume.md'
+- 开源工具链接: 'opensource.md'
