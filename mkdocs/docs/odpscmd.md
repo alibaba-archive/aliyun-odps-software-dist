@@ -58,7 +58,7 @@ https_check=true
 ```
 > odpscmd
 Aliyun ODPS Command Line Tool
-Version 0.20.0
+Version 0.23.1
 @Copyright 2015 Alibaba Cloud Computing Co., Ltd. All rights reserved.
 odps@ proj_name>
 ```
