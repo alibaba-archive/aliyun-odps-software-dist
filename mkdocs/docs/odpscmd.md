@@ -28,6 +28,7 @@ sudo apt-get -y install odpscmd
 
 
 ### 下载压缩包
+* [v0.26.0](/download/odpscmd/0.26.0/odpscmd_public.zip), (md5sum: b528f514091fdd8a0de9724eb052a172)
 * [v0.25.0](/download/odpscmd/0.25.0/odpscmd_public.zip), (md5sum: 330e26d07b5a9ed62d9942f90c3aa69c)
 * [v0.24.2](/download/odpscmd/0.24.2/odpscmd_public.zip), (md5sum: 0407f858ac83a469aa085debfe0b3064)
 * [v0.23.1](/download/odpscmd/0.23.1/odpscmd_public.zip), (md5sum: 882e15bfa276dcffb7bd6c941b44b2ec)
