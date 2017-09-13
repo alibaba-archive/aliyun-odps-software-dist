@@ -58,3 +58,7 @@ make deploy-web
 ```
 
 The python script `auto_deploy.py` can be used (e.g. with a web hooker) to update the web page.
+
+## Edit Templates
+
+When you need to add some stuff into the template, just edit the template in the "site-packages" directory (for some installations, the directory is "dist-packages").
