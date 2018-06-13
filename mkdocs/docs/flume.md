@@ -49,7 +49,7 @@ CREATE TABLE hub_table_basic (col1 STRING, col2 STRING, col3 STRING)
 
 ```
 # odps_basic.conf
-# A single-node Flume configuration for ODPS
+# A single-node Flume configuration for MaxCompute
 # Name the components on this agent
 a1.sources = r1
 a1.sinks = k1
@@ -61,8 +61,8 @@ a1.sources.r1.command = cat /home/admin/data.txt
 
 # Describe the sink
 a1.sinks.k1.type = com.aliyun.odps.flume.sink.OdpsSink
-a1.sinks.k1.accessID = {YOUR_ALIYUN_ODPS_ACCESS_ID}
-a1.sinks.k1.accessKey = {YOUR_ALIYUN_ODPS_ACCESS_KEY}
+a1.sinks.k1.accessID = {YOUR_ALIYUN_MaxCompute_ACCESS_ID}
+a1.sinks.k1.accessKey = {YOUR_ALIYUN_MaxCompute_ACCESS_KEY}
 a1.sinks.k1.odps.endPoint = http://service.odps.aliyun.com/api
 a1.sinks.k1.odps.datahub.endPoint = http://dh.odps.aliyun.com
 a1.sinks.k1.odps.project = testproj

@@ -33,12 +33,12 @@
     Class.forName("com.aliyun.odps.jdbc.OdpsDriver");
 
 
-2\. 创建 `Connection` 对象连接 ODPS:
+2\. 创建 `Connection` 对象连接 MaxCompute:
 
 
     Connection conn = DriverManager.getConnection(url, accessId, accessKey);
 
-ODPS 服务使用了 HTTP 的协议连接，所以一个有效的 JDBC 连接串看起来像这样:
+MaxCompute 服务使用了 HTTP 的协议连接，所以一个有效的 JDBC 连接串看起来像这样:
 
     String url = "jdbc:odps:ENDPOINT?project=PROJECT_NAME&charset=UTF-8"
 
@@ -68,8 +68,8 @@ ODPS 服务使用了 HTTP 的协议连接，所以一个有效的 JDBC 连接串
 
 |  URL 参数名  | Prop 参数名 |                         描述                         |
 |:---------:|:------------:|:-----------------------------------------------------------|
-|  `endpoint` |   `end_point`  | ODPS endpoint                            |
-|  `project`  | `project_name` | 使用 ODPS 项目                                    |
+|  `endpoint` |   `end_point`  | MaxCompute endpoint                            |
+|  `project`  | `project_name` | 使用 MaxCompute 项目                                    |
 |  `accessId` |   `access_id`  | 访问 id                          |
 | `accessKey` |  `access_key`  | 认证秘钥                                      |
 |  `logview`  | `logview_host` | logview 的域名 |

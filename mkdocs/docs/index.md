@@ -1,6 +1,6 @@
-# 阿里云 ODPS 工具
+# 阿里云 MaxCompute 工具
 
-欢迎使用阿里云 ODPS 生态工具，如果遇到请联系 [Lyman](mailto:lymanrb@gmail.com) 或 [onesuper](mailto:onesuperclark@gmail.com) 。
+欢迎使用阿里云 MaxCompute 生态工具，如果遇到请联系 [Lyman](mailto:lymanrb@gmail.com) 或 [Michelle](mailto:0716michelle@gmail.com) 。
 
 
 ## 配置 YUM 远程仓库
@@ -24,7 +24,7 @@ gpgcheck=0
 gpgkey=
 ```
 
-### 安装 ODPS 工具
+### 安装 MaxCompute 工具
 
 
 ```
@@ -58,7 +58,7 @@ $ sudo vi /etc/apt/sources.list
 deb http://repo.aliyun.com/apt/debian/ /
 ```
 
-### 安装 ODPS 工具
+### 安装 MaxCompute 工具
 
 
 ```

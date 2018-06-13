@@ -1,5 +1,5 @@
 
-# ODPS ETL 命令行工具
+# MaxCompute ETL 命令行工具
 
 
 ## 下载
@@ -37,7 +37,7 @@ sudo apt-get -y install tattoo
 
 ## 简介
 
-tattoo(take anything to odps) 是一个命令行版的 ETL 工具。每一条 tattoo 命令可以从一个特定的数据源中提取数据、并加载到 ODPS （分区）表。
+tattoo(take anything to odps) 是一个命令行版的 ETL 工具。每一条 tattoo 命令可以从一个特定的数据源中提取数据、并加载到 MaxCompute （分区）表。
 
 
 例如下面这条命令可以把 CSV 格式的 `file1` 和 `file2` 中的内容上传到 `test_table1`：
@@ -52,8 +52,8 @@ tattoo -t test_table1 read-csv file1 file2
 
 | Property Name    | Default       | Description                       |
 | :---------------- |:-------------| :-------------------------------- |
-| `--config`       | ``~/.odpscmd/odps_config.ini``   | ODPS 的配置文件路径   |
-| `--table`, `-t`  | `null`  | ODPS 表 `[PROJ.TABLE/PARTITION]` |
+| `--config`       | ``~/.odpscmd/odps_config.ini``   | MaxCompute 的配置文件路径   |
+| `--table`, `-t`  | `null`  | MaxCompute 表 `[PROJ.TABLE/PARTITION]` |
 | `--workers`, `-w`| `1`     | 上传所使用的 worker 数量 |
 | `--dry-run`      | `false` | 将提取到的 record 打印到 STDOUT（不上传） |
 | `--overwrite`    | `false` | 是否覆盖目标表（分区）中的内容 |
@@ -61,7 +61,7 @@ tattoo -t test_table1 read-csv file1 file2
 | `--quiet`        | `false` | 不打印进度信息 |
 | `--charset`      | `UTF-8` | 编码 String 的字符集  |
 | `--column`, `-c` | `[]`    | 指定某列进行上传     |
-| `--charset`      | `UTF-8` | ODPS 字符串编码 | 
+| `--charset`      | `UTF-8` | MaxCompute 字符串编码 | 
 | `--time-format`  | `yyyy-MM-dd HH:mm:ss`    | 用来解析日期字符串的 SimpleDateFormat | 
 | `--time-zone`    | `UTC`    | 用来解析日期的时区 | 
 | `--head`         | `-1`    | 上传前 N 条数据，类似 UNIX 的 head 命令 | 
@@ -76,7 +76,7 @@ tattoo -t test_table1 read-csv file1 file2
 * [文本流](#text): 从文本流中提取数据
 * [CSV 文件](#csv): 从 CSV 文件中提取 record 
 * [JDBC 数据源](#jdbc): 从 JDBC 结果集中提取数据 
-* [ODPS 表](#odps): 从某个 ODPS 表（或分区）中提取 record 
+* [MaxCompute 表](#odps): 从某个 MaxCompute 表（或分区）中提取 record 
 * [Protobuf 文件](#protobuf): 从 Protobuf 格式的文件中提取 record 
 
 
@@ -218,15 +218,15 @@ tattoo -t table1 read-jdbc --url 'jdbc:odps:...' \
 ```
 
 
-## ODPS 表
+## MaxCompute 表
 
-`read-odps` 命令从 ODPS 抽取 record，用来快速检验上传以后的数据。
+`read-odps` 命令从 MaxCompute 抽取 record，用来快速检验上传以后的数据。
 
 
 | Property Name    | Default       | Description                       |
 | :---------------- |:-------------| :-------------------------------- |
 | `--charset`      | `UTF-8`       | 用来 decode 字符串（byte array）的编码      |
-| `--config`       | `~/.odpscmd/odps_config.ini`        | ODPS 配置文件  |
+| `--config`       | `~/.odpscmd/odps_config.ini`        | MaxCompute 配置文件  |
 | `--byte-array`   | `false`       | 以 byte array 抽取 String 列的数据         |
 
 
@@ -375,13 +375,13 @@ type                : String         : "QUERY"
 
 
 
-# ODPS ETL 开发套件
+# MaxCompute ETL 开发套件
 
 ETL SDK 包含两个部分：
 
-**ETL API**: 提供了一种在用户代码中方便地将文本流、CSV、JDBC、Protobuf 等文件中的内容上传到 ODPS 的方法，简化了二次开发。
+**ETL API**: 提供了一种在用户代码中方便地将文本流、CSV、JDBC、Protobuf 等文件中的内容上传到 MaxCompute 的方法，简化了二次开发。
 
-**Dataset API**: Dataset API 提供了一套 High Level 数据集的编程接口，和 ODPS 的 SDK 相比，它隐藏了很多细节，使用它可以方便地管理、上传、下载 ODPS 中的数据。
+**Dataset API**: Dataset API 提供了一套 High Level 数据集的编程接口，和 MaxCompute 的 SDK 相比，它隐藏了很多细节，使用它可以方便地管理、上传、下载 MaxCompute 中的数据。
 
 
 ### Maven 依赖
@@ -419,11 +419,11 @@ List<String> paths = new ArrayList<String>();
 paths.add("./test_file.txt");
 
 // string 编码、日期格式、日期时区、指定上传的列名
-LoadODPSContext context = LoadODPSContext("UTF-8", "yyyy-MM-dd HH:mm:ss", "UTC", null);
+LoadMaxComputeContext context = LoadMaxComputeContext("UTF-8", "yyyy-MM-dd HH:mm:ss", "UTC", null);
 
 Pipeline pipe = new Pipeline.Builder()
     .extract(new ReadText(paths, "UTF-8"))
-    .load(new LoadODPSSingleSinkFactory(dataset, context), 2)  // 线程数 2
+    .load(new LoadMaxComputeSingleSinkFactory(dataset, context), 2)  // 线程数 2
     .build();
 pipe.execute();
 
@@ -437,13 +437,13 @@ Datasets.delete(tablename);
 ### 基本概念
 
 
-Tattoo API 使用 URI（字符串） 来表示 ODPS 表中的数据。类似于「统一资源标识符」的概念，URI 是一个用来表示一个或多个数据集（dataset）的字符串，它的模式为：
+Tattoo API 使用 URI（字符串） 来表示 MaxCompute 表中的数据。类似于「统一资源标识符」的概念，URI 是一个用来表示一个或多个数据集（dataset）的字符串，它的模式为：
 
 ```
 project.table/partition_spec
 ```
 
-数据集（dataset）可以是 ODPS 分区表中的一个分区，或一张非分区表。当 `partition_spec` 为非末级分区时，URI 表示多个数据集（dataset）。
+数据集（dataset）可以是 MaxCompute 分区表中的一个分区，或一张非分区表。当 `partition_spec` 为非末级分区时，URI 表示多个数据集（dataset）。
 
 例如下面这个 URI 表示 `clothes/color=Red/size=XXL` 目录下的分区：
 
@@ -504,7 +504,7 @@ Datasets.create(uri);
 ```
 
 
-`Datasets.create()` 也可以从 schema 用来创建 ODPS 表，可通过 Builder Pattern 来构造：
+`Datasets.create()` 也可以从 schema 用来创建 MaxCompute 表，可通过 Builder Pattern 来构造：
 
 ```
 TableSchema schema = new SchemaBuilder()

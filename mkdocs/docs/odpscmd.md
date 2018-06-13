@@ -1,5 +1,5 @@
 
-# ODPS 命令行工具
+# MaxCompute 命令行工具
 
 ## 安装
 
@@ -28,7 +28,7 @@ sudo apt-get -y install odpscmd
 
 
 ### 下载压缩包
-* [v0.29.1](/download/odpscmd/0.29.1/odpscmd_public.zip), (md5sum: b2d6c70b7db80eef23fb9ad061ec87de)
+* [v0.29.2](/download/odpscmd/0.29.2/odpscmd_public.zip), (md5sum: 5107220722e6f804fcb7216a07a0a4a4)
 * [v0.28.0](/download/odpscmd/0.28.0/odpscmd_public.zip), (md5sum: 9a20f0a67d5003155fb80d11b4eb3cb4)
 * [v0.27.1](/download/odpscmd/0.27.1/odpscmd_public.zip), (md5sum: 9a167fbb3c535dda9824e7c696516fd4)
 * [v0.26.0](/download/odpscmd/0.26.0/odpscmd_public.zip), (md5sum: b528f514091fdd8a0de9724eb052a172)
@@ -73,7 +73,7 @@ this_is_a_user_name:this_is_a_table_name
 ...
 ```
 
-5.更多使用方法请参阅 [阿里云 ODPS 官方文档](https://help.aliyun.com/document_detail/odps/tools/console/console.html)
+5.更多使用方法请参阅 [阿里云 MaxCompute 官方文档](https://help.aliyun.com/document_detail/odps/tools/console/console.html)
 
 
 ## Github

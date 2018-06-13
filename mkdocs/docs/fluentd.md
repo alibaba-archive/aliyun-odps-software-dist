@@ -76,13 +76,13 @@ export PATH="$PATH:$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
 
 ## 运行 & 验证
 
-假设需要导入 ODPS 的日志文件位于 `/var/log/nginx/nginx.log`，其格式为
+假设需要导入 MaxCompute 的日志文件位于 `/var/log/nginx/nginx.log`，其格式为
 
 ```
 42.233.239.113 - - [08/Nov/2015:07:50:59 +0800] "GET http://odps.aliyun.com/ HTTP/1.1" 200 179 "-" "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"
 ```
 
-假设需要导入的 ODPS 表为 demo_access_log，其建表语句为
+假设需要导入的 MaxCompute 表为 demo_access_log，其建表语句为
 
 ```
 create table demo_access_log(
