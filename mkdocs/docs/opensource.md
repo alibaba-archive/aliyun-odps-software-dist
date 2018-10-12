@@ -1,11 +1,11 @@
 
-# 开源工具列表
+# Opensource tools list
 
 
 
 
 
 * [JDBC](https://github.com/aliyun/aliyun-odps-jdbc)
-* [Fluentd 插件](https://github.com/aliyun/aliyun-odps-fluentd-plugin) 
-* [Flume 插件](https://github.com/aliyun/aliyun-odps-flume-plugin) 
+* [Fluentd Plugin](https://github.com/aliyun/aliyun-odps-fluentd-plugin) 
+* [Flume Plugin](https://github.com/aliyun/aliyun-odps-flume-plugin) 
 

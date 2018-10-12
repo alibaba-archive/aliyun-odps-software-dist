@@ -1,19 +1,19 @@
-# 阿里云 MaxCompute 工具
+# Aliyun MaxCompute tools
 
-欢迎使用阿里云 MaxCompute 生态工具，如果遇到请联系 [Lyman](mailto:lymanrb@gmail.com) 或 [Michelle](mailto:0716michelle@gmail.com) 。
+Welcome to Aliyun MaxCompute tools, if you have any questions, please contact [Lyman](mailto:lymanrb@gmail.com) or [Michelle](mailto:0716michelle@gmail.com) 。
 
 
-## 配置 YUM 远程仓库
+## Configure YUM remote repository
 
-### 添加远程仓库信息
+### Add yum repository
 
-1.新建 `/etc/yum.repos.d` 目录下新建一个叫 `aliyun.repo` 的文件
+1. Create `/etc/yum.repos.d` directory and add a `aliyun.repo` file
 
 ```
 touch /etc/yum.repos.d/aliyun.repo
 ```
 
-2.编辑它的内容，保存并退出
+2. Edit content, save and exit
 
 ```
 [aliyun-yum]
@@ -24,7 +24,7 @@ gpgcheck=0
 gpgkey=
 ```
 
-### 安装 MaxCompute 工具
+### Install MaxCompute CLI tool
 
 
 ```
@@ -32,33 +32,33 @@ yum -y install odpscmd
 ```
 
 
-## 配置 APT 远程仓库
+## Configure APT remote repository
 
 
-### 下载并添加仓库的公钥
+### Download and add the public key
 
 ```
 $ curl -s http://repo.aliyun.com/deb.gpg.key | sudo apt-key add -
 ```
 
 
-### 添加 Aliyun 的 deb 源
+### Add Aliyun deb source
 
 
-1.修改源列表：
+1. Edit sources.list：
 
 ```
 $ sudo vi /etc/apt/sources.list
 ```
 
 
-2.在文件的末尾添加以下内容，保存并退出
+2. Append new line to file, save and exit
 
 ```
 deb http://repo.aliyun.com/apt/debian/ /
 ```
 
-### 安装 MaxCompute 工具
+### Install MaxCompute CLI tool
 
 
 ```

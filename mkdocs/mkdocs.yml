@@ -1,8 +1,8 @@
-site_name: 阿里云 MaxCompute 生态
+site_name: Aliyun MaxCompute Ecosystem
 site_favicon: favicon.ico
 theme: bootstrap
 google_analytics: ['UA-70496103-1', 'repo.aliyun.com']
 pages:
 - Home: 'index.md'
-- 命令行工具: 'odpscmd.md'
-- 开源工具链接: 'opensource.md'
+- CLI tool: 'odpscmd.md'
+- Opensource tools link: 'opensource.md'

@@ -1,34 +1,31 @@
+# MaxCompute CLI tool odpscmd
 
-# MaxCompute 命令行工具
+## Install odpscmd
 
-## 安装
-
-### Redhat/CentOS 用户通过 YUM 安装
+### Install odpscmd by using YUM (Red Hat and CentOS)
 
 <div class="alert alert-info" role="alert">
-<p>Redhat, CentOS 用户请根据<a href="/#yum">指导配置 YUM 远程仓库</a>。</p>
+<p>For Red Hat and CentOS users, configure the Yellowdog Updater, Modified 
+(YUM) remote repository. For more information, see <a href="/#yum">Configure YUM remote repository</a>.</p>
 </div>
-
 
 ```
 sudo yum -y install odpscmd
 ```
 
-### Ubuntu/Debian 用户通过 APT 安装
+### Install odpscmd by using APT (Ubuntu and Debian)
 
 <div class="alert alert-info" role="alert">
-<p>Ubuntu, Debian 用户请根据<a href="/#apt">指导配置 APT 远程仓库</a>。</p>
+<p>For Ubuntu and Debian users, configure the Advanced Package Tool
+ (APT) remote repository. For more information, see <a href="/#apt">Configure APT remote repository</a>.</p>
 </div>
-
 
 ```
 sudo apt-get -y install odpscmd
 ```
 
+### Download one of the following packages to perform a local installation.
 
-
-### 下载压缩包
-* [v0.29.5](/download/odpscmd/0.29.5/odpscmd_public.zip), (md5sum: df41d08d365e2a444a21ef7f2991ec8c)
 * [v0.29.2](/download/odpscmd/0.29.2/odpscmd_public.zip), (md5sum: 5107220722e6f804fcb7216a07a0a4a4)
 * [v0.28.0](/download/odpscmd/0.28.0/odpscmd_public.zip), (md5sum: 9a20f0a67d5003155fb80d11b4eb3cb4)
 * [v0.27.1](/download/odpscmd/0.27.1/odpscmd_public.zip), (md5sum: 9a167fbb3c535dda9824e7c696516fd4)
@@ -36,12 +33,9 @@ sudo apt-get -y install odpscmd
 * [v0.25.0](/download/odpscmd/0.25.0/odpscmd_public.zip), (md5sum: 330e26d07b5a9ed62d9942f90c3aa69c)
 * [v0.24.2](/download/odpscmd/0.24.2/odpscmd_public.zip), (md5sum: 0407f858ac83a469aa085debfe0b3064)
 
+## Configure and use odpscmd
 
-
-
-## 配置和使用
-
-1.成功安装以后，odpscmd 会在用户 home 目录下新建一个名字叫 `.odpscmd` 的目录，其中保存了 odpscmd 的配置文件 `~/.odpscmd/odps_config.ini`，打开它将看到：
+1. After installation, odpscmd creates the `.odpscmd` directory in the home directory to store the odpscmd configuration file `~/.odpscmd/odps_config.ini`. The file contains the following settings:
 
 ```
 project_name=
@@ -53,9 +47,9 @@ log_view_host=http://logview.odps.aliyun.com
 https_check=true
 ```
 
-2.在其中填入登录所需要的信息（包括项目名、accessId/Key），保存并退出。
+2. Open the file, add the logon information, such as the project name, AccessId, and AccessKey, save the file, and then exit.
 
-3.在命令行中输入 `odpscmd` ，回车，将看到这样的提示：
+3. Enter `odpscmd` at the CLI, and press Enter. The output is as follows:
 
 ```
 > odpscmd
@@ -65,7 +59,7 @@ Version 0.29.1
 odps@ proj_name>
 ```
 
-4.其中 `proj_name` 代表你所在的项目名。输入 `list tables` 可以列出项目下的所有表名。
+4. The `proj_name` parameter specifies the project name. Enter `list tables` to list all table names under the project.
 
 ```
 odps@ proj_name>list tables;
@@ -74,9 +68,9 @@ this_is_a_user_name:this_is_a_table_name
 ...
 ```
 
-5.更多使用方法请参阅 [阿里云 MaxCompute 官方文档](https://help.aliyun.com/document_detail/odps/tools/console/console.html)
+5. For more information about using odpscmd, see [Client.](https://help.aliyun.com/document_detail/odps/tools/console/console.html)
 
+## GitHub
 
-## Github
+Source code is now available for this project. For more information about managing the project with GitHub, see [GitHub.](https://github.com/aliyun/aliyun-odps-console)
 
-该项目已开源，更多信息请访问 [Github](https://github.com/aliyun/aliyun-odps-console) 
