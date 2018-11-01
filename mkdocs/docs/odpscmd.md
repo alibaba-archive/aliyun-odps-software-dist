@@ -25,7 +25,7 @@ sudo apt-get -y install odpscmd
 ```
 
 ### Download one of the following packages to perform a local installation.
-
+* [v0.29.6](/download/odpscmd/0.29.6/odpscmd_public.zip), (md5sum: fd9c99f41ebcd9103256c725ba479023)
 * [v0.29.2](/download/odpscmd/0.29.2/odpscmd_public.zip), (md5sum: 5107220722e6f804fcb7216a07a0a4a4)
 * [v0.28.0](/download/odpscmd/0.28.0/odpscmd_public.zip), (md5sum: 9a20f0a67d5003155fb80d11b4eb3cb4)
 * [v0.27.1](/download/odpscmd/0.27.1/odpscmd_public.zip), (md5sum: 9a167fbb3c535dda9824e7c696516fd4)
